@@ -33,7 +33,6 @@ class AlcoholicViewController: UIViewController{
         self.UItableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cellReuseIdentifier")
     }
     
-    let dq = DispatchQueue.init(label: "bgThread", qos: .background)
 }
 
 extension AlcoholicViewController: AlcoholicListDelegate{
@@ -60,11 +59,10 @@ extension AlcoholicViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier", for: indexPath) as! TableViewCell
         cell.tableViewLabel.text = drinkName[indexPath.row]
         
-        dq.async {
-            let url = URL(string: self.drinkThumbURl[indexPath.row])!
-            let image = self.getImage(url: url)
-            DispatchQueue.main.async {
-                cell.tableviewImageView.image = image
+        DispatchQueue.main.async {
+            let url = URL(string: self.drinkThumbURl[indexPath.row])
+            if let imgUrl = url {
+                cell.tableviewImageView.kf.setImage(with: imgUrl)
             }
         }
         return cell

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -54,7 +55,7 @@
                     </view>
                     <connections>
                         <outlet property="UItableView" destination="aDI-je-heI" id="oN0-2i-win"/>
-                        <segue destination="g04-hQ-Xjp" kind="presentation" identifier="showAlcoholDrink" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="uWp-vb-yzW"/>
+                        <segue destination="g04-hQ-Xjp" kind="presentation" identifier="showAlcoholDrink" modalPresentationStyle="automatic" modalTransitionStyle="coverVertical" id="uWp-vb-yzW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtA-Yr-oQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -82,12 +83,11 @@
                                         <rect key="frame" x="10" y="20" width="388" height="450"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7k-bx-v3w" userLabel="drinkofdayLabel">
-                                                <rect key="frame" x="15" y="9.9999999999999964" width="358" height="60.666666666666657"/>
+                                                <rect key="frame" x="15" y="9.9999999999999964" width="358" height="63.666666666666657"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="ApocalypseGrunge" family="Apocalypse Grunge" pointSize="38"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" name="ApocalypseGrunge" family="Apocalypse Grunge" pointSize="40"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" systemColor="labelColor"/>
+                                                <color key="shadowColor" name="AccentColor"/>
                                                 <size key="shadowOffset" width="2" height="1"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -96,28 +96,26 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="q3p-EE-PtX">
-                                                <rect key="frame" x="20" y="85.666666666666686" width="348" height="150"/>
+                                                <rect key="frame" x="20" y="88.666666666666686" width="348" height="150"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-Ek-q4q">
-                                                        <rect key="frame" x="0.0" y="0.0" width="196" height="135.33333333333334"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="196" height="136.66666666666666"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1f-x5-qGy">
-                                                                <rect key="frame" x="0.0" y="0.0" width="196" height="42"/>
-                                                                <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="30"/>
-                                                                <color key="textColor" name="AccentColor"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="196" height="37.666666666666664"/>
+                                                                <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="26"/>
                                                                 <nil key="highlightedColor"/>
-                                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                                <color key="shadowColor" name="AccentColor"/>
+                                                                <size key="shadowOffset" width="1" height="1"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXy-qA-r40">
-                                                                <rect key="frame" x="0.0" y="62" width="196" height="28"/>
-                                                                <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="20"/>
-                                                                <color key="textColor" name="AccentColor"/>
+                                                                <rect key="frame" x="0.0" y="57.666666666666629" width="196" height="31"/>
+                                                                <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="22"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjx-Oz-0MP">
-                                                                <rect key="frame" x="0.0" y="110" width="196" height="25.333333333333343"/>
-                                                                <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="18"/>
-                                                                <color key="textColor" name="AccentColor"/>
+                                                                <rect key="frame" x="0.0" y="108.66666666666663" width="196" height="28"/>
+                                                                <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="20"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -135,14 +133,14 @@
                                                 </constraints>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Info" translatesAutoresizingMaskIntoConstraints="NO" id="WRB-iB-WqI">
-                                                <rect key="frame" x="20" y="255.66666666666669" width="348" height="184.33333333333331"/>
+                                                <rect key="frame" x="20" y="258.66666666666669" width="348" height="181.33333333333331"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="textColor" name="AccentColor"/>
-                                                <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="22"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="backgroundColor" name="dayDrinkColor"/>
                                         <constraints>
                                             <constraint firstItem="q3p-EE-PtX" firstAttribute="leading" secondItem="Jm9-cO-qlf" secondAttribute="leading" constant="20" symbolic="YES" id="1DU-Gb-bzR"/>
                                             <constraint firstAttribute="height" constant="450" id="Aas-Xi-Ybb"/>
@@ -156,18 +154,24 @@
                                             <constraint firstAttribute="trailing" secondItem="q3p-EE-PtX" secondAttribute="trailing" constant="20" id="hcp-BY-NI8"/>
                                             <constraint firstItem="b7k-bx-v3w" firstAttribute="top" secondItem="Jm9-cO-qlf" secondAttribute="top" constant="10" id="laU-2d-YUX"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCO-i8-eu0">
-                                        <rect key="frame" x="10" y="490" width="388" height="218"/>
+                                        <rect key="frame" x="10" y="490" width="388" height="228"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGB-mC-EKp" userLabel="AlcoholicView">
-                                                <rect key="frame" x="10" y="111.33333333333337" width="150" height="60"/>
+                                                <rect key="frame" x="20" y="76.333333333333371" width="160" height="140"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziq-7G-SUq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alcohol" translatesAutoresizingMaskIntoConstraints="NO" id="SBc-f0-isL">
+                                                        <rect key="frame" x="0.0" y="10" width="160" height="100"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziq-7G-SUq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
                                                         <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="25"/>
                                                         <state key="normal" title="Be Alcoholic">
-                                                            <color key="titleColor" name="AccentColor"/>
+                                                            <color key="titleColor" systemColor="labelColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="alcholocButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gI-ue-5UJ"/>
@@ -175,55 +179,76 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <color key="backgroundColor" name="typesDrinkColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="4D9-Fl-dfQ"/>
+                                                    <constraint firstAttribute="width" constant="160" id="4D9-Fl-dfQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SBc-f0-isL" secondAttribute="trailing" id="815-VM-8b9"/>
                                                     <constraint firstAttribute="trailing" secondItem="ziq-7G-SUq" secondAttribute="trailing" id="8Ya-e0-Hyk"/>
+                                                    <constraint firstItem="SBc-f0-isL" firstAttribute="leading" secondItem="PGB-mC-EKp" secondAttribute="leading" id="COT-Jj-9Em"/>
                                                     <constraint firstAttribute="bottom" secondItem="ziq-7G-SUq" secondAttribute="bottom" id="GIq-e7-7L9"/>
+                                                    <constraint firstItem="SBc-f0-isL" firstAttribute="top" secondItem="PGB-mC-EKp" secondAttribute="top" constant="10" id="N3A-xL-9gT"/>
                                                     <constraint firstItem="ziq-7G-SUq" firstAttribute="top" secondItem="PGB-mC-EKp" secondAttribute="top" id="QXj-i4-g2B"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SBc-f0-isL" secondAttribute="bottom" constant="30" id="XLv-zR-be7"/>
                                                     <constraint firstItem="ziq-7G-SUq" firstAttribute="leading" secondItem="PGB-mC-EKp" secondAttribute="leading" id="fIV-bt-gSm"/>
-                                                    <constraint firstAttribute="height" constant="60" id="hGa-bF-CGj"/>
+                                                    <constraint firstAttribute="height" constant="140" id="hGa-bF-CGj"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-VG-ofV" userLabel="NonAlcoholicView">
-                                                <rect key="frame" x="228" y="111.33333333333337" width="150" height="60"/>
+                                                <rect key="frame" x="218" y="76.333333333333371" width="160" height="140"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65C-UF-PhJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65C-UF-PhJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
                                                         <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="25"/>
                                                         <state key="normal" title="Stay Sober">
-                                                            <color key="titleColor" name="AccentColor"/>
+                                                            <color key="titleColor" systemColor="labelColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="soberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sM0-a6-nbb"/>
                                                             <segue destination="qgD-q9-Nm9" kind="presentation" id="Sxg-6g-Pau"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="juice" translatesAutoresizingMaskIntoConstraints="NO" id="f7T-zQ-esk">
+                                                        <rect key="frame" x="0.0" y="10" width="160" height="100"/>
+                                                    </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <color key="backgroundColor" name="typesDrinkColor"/>
                                                 <constraints>
                                                     <constraint firstItem="65C-UF-PhJ" firstAttribute="top" secondItem="CV6-VG-ofV" secondAttribute="top" id="9NU-I3-i6F"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f7T-zQ-esk" secondAttribute="bottom" constant="30" id="CSM-Kw-9fG"/>
                                                     <constraint firstAttribute="bottom" secondItem="65C-UF-PhJ" secondAttribute="bottom" id="DX9-bE-Alr"/>
                                                     <constraint firstItem="65C-UF-PhJ" firstAttribute="leading" secondItem="CV6-VG-ofV" secondAttribute="leading" id="NHt-9O-Lx0"/>
-                                                    <constraint firstAttribute="width" constant="150" id="Wlw-Sp-p7a"/>
-                                                    <constraint firstAttribute="height" constant="60" id="cJa-Zf-Xih"/>
+                                                    <constraint firstItem="f7T-zQ-esk" firstAttribute="top" secondItem="CV6-VG-ofV" secondAttribute="top" constant="10" id="Uam-Zt-fMq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f7T-zQ-esk" secondAttribute="trailing" id="Vxg-S7-905"/>
+                                                    <constraint firstAttribute="width" constant="160" id="Wlw-Sp-p7a"/>
+                                                    <constraint firstAttribute="height" constant="140" id="cJa-Zf-Xih"/>
                                                     <constraint firstAttribute="trailing" secondItem="65C-UF-PhJ" secondAttribute="trailing" id="mt7-tZ-zoP"/>
+                                                    <constraint firstItem="f7T-zQ-esk" firstAttribute="leading" secondItem="CV6-VG-ofV" secondAttribute="leading" id="rtL-Ta-4Ab"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your drink type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg4-Bd-hzQ">
-                                                <rect key="frame" x="5" y="20.000000000000004" width="373" height="46.333333333333343"/>
+                                                <rect key="frame" x="5" y="10.000000000000004" width="373" height="46.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="33"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
-                                            <constraint firstItem="CV6-VG-ofV" firstAttribute="top" secondItem="bg4-Bd-hzQ" secondAttribute="bottom" constant="45" id="4lA-4N-oU1"/>
-                                            <constraint firstItem="PGB-mC-EKp" firstAttribute="top" secondItem="bg4-Bd-hzQ" secondAttribute="bottom" constant="45" id="8Yz-6f-HGL"/>
+                                            <constraint firstItem="CV6-VG-ofV" firstAttribute="top" secondItem="bg4-Bd-hzQ" secondAttribute="bottom" constant="20" id="4lA-4N-oU1"/>
+                                            <constraint firstItem="PGB-mC-EKp" firstAttribute="top" secondItem="bg4-Bd-hzQ" secondAttribute="bottom" constant="20" id="8Yz-6f-HGL"/>
                                             <constraint firstItem="bg4-Bd-hzQ" firstAttribute="leading" secondItem="LCO-i8-eu0" secondAttribute="leading" constant="5" id="8as-f3-cAS"/>
-                                            <constraint firstItem="PGB-mC-EKp" firstAttribute="leading" secondItem="LCO-i8-eu0" secondAttribute="leading" constant="10" id="FKW-ac-rn9"/>
+                                            <constraint firstItem="PGB-mC-EKp" firstAttribute="leading" secondItem="LCO-i8-eu0" secondAttribute="leading" constant="20" id="FKW-ac-rn9"/>
                                             <constraint firstAttribute="trailing" secondItem="CV6-VG-ofV" secondAttribute="trailing" constant="10" id="O1W-xw-8ol"/>
-                                            <constraint firstItem="bg4-Bd-hzQ" firstAttribute="top" secondItem="LCO-i8-eu0" secondAttribute="top" constant="20" id="bat-8F-WEq"/>
+                                            <constraint firstItem="bg4-Bd-hzQ" firstAttribute="top" secondItem="LCO-i8-eu0" secondAttribute="top" constant="10" id="bat-8F-WEq"/>
                                             <constraint firstAttribute="trailing" secondItem="bg4-Bd-hzQ" secondAttribute="trailing" constant="10" id="pN4-cJ-z8I"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -237,7 +262,7 @@
                                 <constraints>
                                     <constraint firstItem="Jm9-cO-qlf" firstAttribute="leading" secondItem="0sg-vs-dJB" secondAttribute="leading" constant="10" id="9Wm-Am-Edf"/>
                                     <constraint firstAttribute="trailing" secondItem="Jm9-cO-qlf" secondAttribute="trailing" constant="10" id="DKn-oZ-1mg"/>
-                                    <constraint firstAttribute="bottom" secondItem="LCO-i8-eu0" secondAttribute="bottom" constant="30" id="Ewi-zi-Tmo"/>
+                                    <constraint firstAttribute="bottom" secondItem="LCO-i8-eu0" secondAttribute="bottom" constant="20" id="Ewi-zi-Tmo"/>
                                     <constraint firstItem="Jm9-cO-qlf" firstAttribute="top" secondItem="0sg-vs-dJB" secondAttribute="top" constant="20" id="I6X-j6-ggC"/>
                                     <constraint firstAttribute="trailing" secondItem="LCO-i8-eu0" secondAttribute="trailing" constant="10" id="Ztv-mS-Bi9"/>
                                     <constraint firstItem="LCO-i8-eu0" firstAttribute="top" secondItem="Jm9-cO-qlf" secondAttribute="bottom" constant="20" id="ihj-lN-RPY"/>
@@ -309,7 +334,7 @@
                     </view>
                     <connections>
                         <outlet property="UItableView" destination="QuT-YA-RgV" id="xlS-qM-ToM"/>
-                        <segue destination="g04-hQ-Xjp" kind="presentation" identifier="showMocktail" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="nob-I2-qei"/>
+                        <segue destination="g04-hQ-Xjp" kind="presentation" identifier="showMocktail" modalPresentationStyle="automatic" modalTransitionStyle="coverVertical" id="nob-I2-qei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V5O-N7-qEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -321,33 +346,35 @@
             <objects>
                 <viewController id="g04-hQ-Xjp" customClass="DrinkController" customModule="Aperitif" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jLX-PI-p4z">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qj-tS-sZx">
-                                <rect key="frame" x="20" y="64" width="388" height="78"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="55"/>
+                                <rect key="frame" x="20" y="20" width="388" height="72"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="50"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="labelColor"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqj-AC-jRD">
-                                <rect key="frame" x="20" y="162" width="200" height="200"/>
+                                <rect key="frame" x="20" y="112" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="FT9-KH-Dda"/>
                                     <constraint firstAttribute="height" constant="200" id="fZq-j4-Dcy"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-T9-ALl">
-                                <rect key="frame" x="240" y="167" width="135" height="30"/>
+                                <rect key="frame" x="240" y="117" width="145.33333333333337" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rkm-9e-Td6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-kQ-KVJ">
-                                <rect key="frame" x="245" y="202" width="163" height="160"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ing" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-kQ-KVJ">
+                                <rect key="frame" x="245" y="152" width="163" height="160"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="BnD-w8-jVL"/>
                                 </constraints>
@@ -355,21 +382,21 @@
                                 <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass preferred : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRc-AD-FEP">
-                                <rect key="frame" x="25" y="387" width="383" height="22.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass preferred : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRc-AD-FEP">
+                                <rect key="frame" x="25" y="342" width="383" height="22.666666666666686"/>
                                 <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZZL-AA-j0y">
-                                <rect key="frame" x="30" y="476.33333333333326" width="368" height="375.66666666666674"/>
+                                <rect key="frame" x="30" y="431.33333333333326" width="368" height="366.66666666666674"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to make this lovely drink" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-XW-L8Z">
-                                <rect key="frame" x="25" y="424.66666666666669" width="383" height="36.666666666666686"/>
+                                <rect key="frame" x="25" y="384.66666666666669" width="383" height="36.666666666666686"/>
                                 <fontDescription key="fontDescription" name="cream-DEMO" family="cream" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -383,7 +410,7 @@
                             <constraint firstItem="3qj-tS-sZx" firstAttribute="top" secondItem="vaM-h6-ZOH" secondAttribute="top" constant="20" id="33l-JE-aG6"/>
                             <constraint firstItem="vaM-h6-ZOH" firstAttribute="trailing" secondItem="3qj-tS-sZx" secondAttribute="trailing" constant="20" id="9jc-06-flg"/>
                             <constraint firstItem="vaM-h6-ZOH" firstAttribute="trailing" secondItem="c3P-kQ-KVJ" secondAttribute="trailing" constant="20" id="Bke-Jh-XxU"/>
-                            <constraint firstItem="hhC-XW-L8Z" firstAttribute="top" secondItem="bRc-AD-FEP" secondAttribute="bottom" constant="15" id="DFF-YV-m3p"/>
+                            <constraint firstItem="hhC-XW-L8Z" firstAttribute="top" secondItem="bRc-AD-FEP" secondAttribute="bottom" constant="20" id="DFF-YV-m3p"/>
                             <constraint firstItem="gRu-T9-ALl" firstAttribute="top" secondItem="3qj-tS-sZx" secondAttribute="bottom" constant="25" id="MOq-5c-qQE"/>
                             <constraint firstItem="vaM-h6-ZOH" firstAttribute="trailing" secondItem="bRc-AD-FEP" secondAttribute="trailing" constant="20" id="QUC-y3-hz6"/>
                             <constraint firstItem="3qj-tS-sZx" firstAttribute="leading" secondItem="vaM-h6-ZOH" secondAttribute="leading" constant="20" id="RTP-Cb-GRI"/>
@@ -394,10 +421,10 @@
                             <constraint firstItem="vaM-h6-ZOH" firstAttribute="bottom" secondItem="ZZL-AA-j0y" secondAttribute="bottom" constant="40" id="lLt-hn-Xfj"/>
                             <constraint firstItem="ZZL-AA-j0y" firstAttribute="leading" secondItem="vaM-h6-ZOH" secondAttribute="leading" constant="30" id="nbm-6q-2uG"/>
                             <constraint firstItem="vaM-h6-ZOH" firstAttribute="trailing" secondItem="hhC-XW-L8Z" secondAttribute="trailing" constant="20" id="piM-3O-v75"/>
-                            <constraint firstItem="ZZL-AA-j0y" firstAttribute="top" secondItem="hhC-XW-L8Z" secondAttribute="bottom" constant="15" id="r1d-ji-ShV"/>
+                            <constraint firstItem="ZZL-AA-j0y" firstAttribute="top" secondItem="hhC-XW-L8Z" secondAttribute="bottom" constant="10" id="r1d-ji-ShV"/>
                             <constraint firstItem="gRu-T9-ALl" firstAttribute="leading" secondItem="eqj-AC-jRD" secondAttribute="trailing" constant="20" id="xoQ-jY-SR0"/>
                             <constraint firstItem="hhC-XW-L8Z" firstAttribute="leading" secondItem="vaM-h6-ZOH" secondAttribute="leading" constant="25" id="y3n-GG-0B2"/>
-                            <constraint firstItem="bRc-AD-FEP" firstAttribute="top" secondItem="c3P-kQ-KVJ" secondAttribute="bottom" constant="25" id="y9Q-OV-j9n"/>
+                            <constraint firstItem="bRc-AD-FEP" firstAttribute="top" secondItem="c3P-kQ-KVJ" secondAttribute="bottom" constant="30" id="y9Q-OV-j9n"/>
                         </constraints>
                     </view>
                     <connections>
@@ -414,24 +441,26 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nob-I2-qei"/>
+        <segue reference="uWp-vb-yzW"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="alcohol" width="512" height="512"/>
+        <image name="juice" width="512" height="512"/>
         <image name="titleImg" width="1004" height="302"/>
         <namedColor name="AccentColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="dayDrinkColor">
+            <color red="1" green="0.95300000905990601" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="typesDrinkColor">
+            <color red="0.78799998760223389" green="0.80000001192092896" blue="0.83499997854232788" alpha="0.80400002002716064" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

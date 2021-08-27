@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
@@ -41,16 +42,14 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         drinkofDayImagetrailingConstriant.constant -= self.view.bounds.width
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animate(withDuration: 1.0, delay: 2.0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 2.5, delay: 1.0, options: .curveEaseOut, animations: {
             self.drinkofDayImagetrailingConstriant.constant += self.view.bounds.width
             self.view.layoutIfNeeded()
         }, completion: nil)
-       
     }
     
     @IBAction func alcholocButtonPressed(_ sender: UIButton) {
@@ -70,14 +69,10 @@ extension ViewController: RandomDrinkDelegate{
    
     func getRandomDrink(_ drink: RandomDrinkInfo) {
         
-        let url = URL(string: drink.imageURL)!
-        guard let data = try? Data(contentsOf: url) else {
-            return
-        }
-        let loadedimage = UIImage(data: data)
-        
+        let imgUrl = URL(string: drink.imageURL)
+
         DispatchQueue.main.async {
-            self.drinkofDayImage.image = loadedimage
+            self.drinkofDayImage.kf.setImage(with: imgUrl)
             self.drinkofDayName.text = drink.name
             self.drinkofDaycategoryLabel.text = "Type: \(drink.category)"
             self.idealGlassLabel.text = "Glass: \(drink.glass)"
@@ -87,18 +82,4 @@ extension ViewController: RandomDrinkDelegate{
     }
 
 }
-
-//extension UIImageView {
-//    func load(url: URL) {
-//        DispatchQueue.main.async { [weak self] in
-//            if let data = try? Data(contentsOf: url) {
-//                if let image = UIImage(data: data) {
-//                    DispatchQueue.main.async {
-//                        self?.image = image
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
 

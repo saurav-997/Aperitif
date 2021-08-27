@@ -10,8 +10,7 @@ import UIKit
 
 class NonAlcoholicViewController: UIViewController {
     
-    
-    @IBOutlet weak var nonAlcoholicTableView: UITableView!
+    @IBOutlet weak var UItableView: UITableView!
     
     var nonalcoholDrink = NonAlcoholicListController()
     var numOfMocktails = 0
@@ -22,19 +21,16 @@ class NonAlcoholicViewController: UIViewController {
     var drinkNameOnClick : String = ""
     var drinkImgURLOnClick: String = ""
     var drinkIDonClick: String = ""
-        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nonalcoholDrink.delegate = self
         nonalcoholDrink.getNonAlcoholicList()
-        
-        self.nonAlcoholicTableView.dataSource = self
-        self.nonAlcoholicTableView.delegate = self
-        
-        self.nonAlcoholicTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cellReuseIdentifier")
+        self.UItableView.dataSource = self
+        self.UItableView.delegate = self
+        self.UItableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cellReuseIdentifier")
     }
-    let dq = DispatchQueue.init(label: "bgThread", qos: .background)
 }
 
 extension NonAlcoholicViewController: NonAlcoholicDrinkDelegate {
@@ -44,31 +40,30 @@ extension NonAlcoholicViewController: NonAlcoholicDrinkDelegate {
         nonAlcdrinkThumbURl = drink.drinkThumbURL
         nonAlcdrinkID = drink.drinkID
         DispatchQueue.main.async {
-            self.nonAlcoholicTableView.reloadData()
+            self.UItableView.reloadData()
         }
     }
+    
 }
 
 extension NonAlcoholicViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numOfMocktails
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier", for: indexPath) as! TableViewCell
-        cell.tableViewLabel.text = "OK"
+        cell.tableViewLabel.text = nonAlcDrinkName[indexPath.row]
         
-        dq.async {
-            let url = URL(string: self.nonAlcdrinkThumbURl[indexPath.row])!
-            let image = self.getImage(url: url)
-            DispatchQueue.main.async {
-                cell.tableviewImageView.image = image
+        DispatchQueue.main.async {
+            let url = URL(string: self.nonAlcdrinkThumbURl[indexPath.row])
+            if let imgUrl = url {
+                cell.tableviewImageView.kf.setImage(with: imgUrl)
             }
         }
+       
         return cell
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         drinkNameOnClick = nonAlcDrinkName[indexPath.row]
@@ -76,7 +71,7 @@ extension NonAlcoholicViewController: UITableViewDelegate, UITableViewDataSource
         drinkIDonClick = nonAlcdrinkID[indexPath.row]
        
         DispatchQueue.main.async {
-         //   self.performSegue(withIdentifier: "showAlcoholDrink", sender: self)
+            self.performSegue(withIdentifier: "showMocktail", sender: self)
         }
     }
     
@@ -86,12 +81,12 @@ extension NonAlcoholicViewController: UITableViewDelegate, UITableViewDataSource
         return loadedimage!
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let newVC = segue.destination as? AlcoholicDrinkController else {
-//            return
-//        }
-//        newVC.drinkID = drinkIDonClick
-//        newVC.drinkName = drinkNameOnClick
-//        newVC.drinkImgURL = drinkImgURLOnClick
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let newVC = segue.destination as? DrinkController else {
+            return
+        }
+        newVC.drinkID = drinkIDonClick
+        newVC.drinkName = drinkNameOnClick
+        newVC.drinkImgURL = drinkImgURLOnClick
+    }
 }

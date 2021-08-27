@@ -17,7 +17,7 @@ struct CocktailDrinkController {
     
     func getCocktailDrink(drinkID: String) {
         let urlString = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=\(drinkID)"
-        print(urlString)
+     //   print(urlString)
         
         if let finalURL = URL(string: urlString) {
             let task = URLSession.shared.dataTask(with: finalURL){(data,response,error) in
